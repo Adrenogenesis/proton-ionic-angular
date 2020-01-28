@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Votre nouveau projet.</ion-card-subtitle>
+    <ion-card-title>Envoie d'informations.</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Votre projet peux être etudié rapidement. Pour cela il est nécessaire de crée un compte ici. Si vous avez déja un compte, les informations concernant votre projet 
+    sont transmises ici.
+  </ion-card-content>
+</ion-card>
+
+<ion-content class="ion-padding">
+ <style>
+  ion-item {
+    border-radius:8px ;
+    margin-bottom: 5px;
+  }
+  </style>
+ 
+  <form class="form" [formGroup]="validations_form"  (ngSubmit)="loginUser(validations_form.value)">
+ 
+    <ion-item>
+      <ion-label  position="floating" style="color: rgb(8, 37, 99);">Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+ 
+    <ion-item>
+      <ion-label  position="floating" style="color: rgb(8, 37, 99);">Mot de passe</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+ 
+    <ion-button style="font-weight: bold;" class="submit-btn" type="submit"  [disabled]="!validations_form.valid">Connexion</ion-button>
+ 
+    <label class="error-message">{{errorMessage}}</label>
+  </form>
+  <p style="color: white;" class="go-to-register">
+    Inscription :<br><br>
+     <a (click)="goToRegisterPage()" style="color: rgb(8, 37, 99);">Crée un compte.</a>
+  </p>
+</ion-content>

@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Réalisations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<style>
+ion-card-content {
+    font-size: 1.5vh;
+
+}
+</style>
+<ion-card>
+  <ion-card-header>
+        <ion-card-title>Applications web</ion-card-title>
+        <ion-card-subtitle> Les projets les plus courant se déclinent en plusieurs catégories :</ion-card-subtitle>
+  </ion-card-header>
+ 
+  <ion-card-content>
+     
+     <div class="ct1">
+      <ul>
+          <li>
+            Les sites internet : Type vitrine, dynamique et e-commerce
+        </li> 
+        <li>
+            Les CMS : Content Management System, c’est-à-dire en français « système de gestion de contenus », comme Wordpress
+        </li>
+        <li>
+            Les applications web : Questionnaires, comptabilité etc...
+        </li>
+        <li>
+            Création graphique : Logo, carte de visite, flyers.
+        </li>
+          <li>
+              Campagnes publicitaire : Mailing
+          </li>
+          <li>
+              Gestion des données : Base de données, MySql, ELK.
+          </li>          
+       </ul>
+      </div>
+   </ion-card-content>
+
+</ion-card>
+
+<ion-content padding>
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+        <ion-item (click)="testClick()">
+           <ion-label>
+              <h3>Site Drupal</h3>
+              <p>Site avec gestion des membres.</p>
+              <img src="/assets/proj/exonet3i.jpg">
+            </ion-label>
+            <ion-icon name="close-circle" slot="end"></ion-icon>
+          </ion-item>
+    </ion-slide>
+    <ion-slide>
+         <ion-item (click)="testClick()">
+           <ion-label>
+            <h3>Site Joomla</h3>
+            <p>Site e-commerce integre</p>
+            <img src="/assets/proj/joomla.png">
+          </ion-label>
+          <ion-icon name="close-circle" slot="end"></ion-icon>
+        </ion-item>
+    </ion-slide>
+    <ion-slide>
+        <ion-item (click)="testClick()">
+            <ion-label>
+              <h3>Site vitrine</h3>
+              <p>Site de presentation et page de contact.</p>
+              <img src="/assets/proj/salle.png">
+            </ion-label>
+            <ion-icon name="close-circle" slot="end"></ion-icon>
+          </ion-item>
+    </ion-slide>
+  </ion-slides>
+
+
+
+</ion-content>
+

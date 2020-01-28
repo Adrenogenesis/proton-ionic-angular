@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Protonwebmaster</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+     <!-- cordova script (this will be a 404 during development) -->
+     <script src="cordova.js"></script>
+  
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+   
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_c3AsUUPMq1hqDj47J-DVdhUHFw550GM",
+    authDomain: "ionic-4-firebase-crud-de-55a43.firebaseapp.com",
+    databaseURL: "https://ionic-4-firebase-crud-de-55a43.firebaseio.com",
+    projectId: "ionic-4-firebase-crud-de-55a43",
+    storageBucket: "ionic-4-firebase-crud-de-55a43.appspot.com",
+    messagingSenderId: "677083149213",
+    appId: "1:677083149213:web:cbbfd6d7d1b6df42187574",
+    measurementId: "G-P10TPRRX6J"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+
+<body ng-app="app" animation="slide-left-right-ios7">
+  
+<app-root></app-root>
+  </body>
+
+</html>

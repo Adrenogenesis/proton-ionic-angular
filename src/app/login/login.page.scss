@@ -1,0 +1,18 @@
+/* Set variables for all modes */
+:root {
+        /* Set the background of the entire app */
+        --ion-background-color: #ffffff75;
+            
+      }
+      
+ion-button{
+        --background: rgb(0, 81, 255);
+        --box-shadow: 5px 8px 2px black;
+        --z-index: 999;
+    }
+
+ion-content{
+       // --background:  #eee4ff;         
+        --ion-text-color: rgb(0, 0, 0);
+        --background:  url("https://www.exonet3i.com/img/iphone_acrylic.jpg") no-repeat center / cover;
+  }
