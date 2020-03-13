@@ -5,8 +5,10 @@
   },
   "type": "angular",
   "id": "4809bab8",
-  "proxies": [{
-    "path": "/",
-    "proxyUrl": "http://localhost:8099"
-}]
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://localhost:8099"
+    }
+  ]
 }

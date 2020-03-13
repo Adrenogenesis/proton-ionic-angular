@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import * as firebase from 'firebase';
 import { DataService } from './data.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 firebase.initializeApp(environment.firebase);
 
@@ -43,7 +44,7 @@ const firebaseConfig = {
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),
     AppRoutingModule, AngularFireAuthModule, HttpClientModule, ReactiveFormsModule, AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule, AngularFireStorageModule],
+    AngularFireDatabaseModule, AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     StatusBar,
     SplashScreen,
